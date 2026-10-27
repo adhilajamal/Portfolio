@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', ui-sans-serif, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-ink: #0a0c10;
+  --color-ink-2: #10131a;
+  --color-surface: #141822;
+  --color-line: #232836;
+  --color-muted: #8b93a7;
+  --color-soft: #c7cddb;
+  --color-teal: #5eead4;
+  --color-violet: #a78bfa;
+  --color-amber: #fbbf24;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-ink text-soft font-sans antialiased;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--color-teal) 35%, transparent);
+    color: white;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-teal);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .section {
+    @apply mx-auto w-full max-w-6xl px-5 py-14 sm:px-8 md:py-20;
+  }
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.2em] text-teal uppercase;
+  }
+  .heading {
+    @apply font-display mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl;
+  }
+  .card {
+    @apply border-line bg-surface/60 rounded-2xl border backdrop-blur-sm;
+  }
+  .chip {
+    @apply border-line text-soft rounded-full border bg-white/[0.03] px-3 py-1 font-mono text-[11px];
+  }
+  .btn-primary {
+    @apply bg-teal text-ink inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition hover:bg-white;
+  }
+  .btn-ghost {
+    @apply border-line hover:border-teal hover:text-teal inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium text-white transition;
+  }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 70%);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-4deg);
+  }
+}
+.animate-float {
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 0 0 rgb(94 234 212 / 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgb(94 234 212 / 0);
+  }
+}
+.pulse-dot {
+  animation: pulse-dot 1.8s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-float,
+  .pulse-dot {
+    animation: none;
+  }
+}
