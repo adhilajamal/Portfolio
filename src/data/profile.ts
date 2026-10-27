@@ -5,7 +5,7 @@ export const profile = {
   shortName: 'Adhila Jamal',
   role: 'React Native & Frontend Engineer',
   location: 'Calicut, Kerala',
-  phone: '+974 7119 8837',
+  phone: '+91 90375 96328',
   email: 'adhilajamal89@gmail.com',
   linkedin: 'https://linkedin.com/in/adhilajamal',
   github: 'https://github.com/adhilajamal',
