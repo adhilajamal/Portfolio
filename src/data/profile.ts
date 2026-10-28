@@ -16,9 +16,8 @@ export const profile = {
   intro:
     'Over 2 years building and shipping cross-platform apps for Android and iOS. I work across the stack: storefronts, cart and checkout flows, payment gateways, push notifications, and the REST APIs that tie them together.',
   summary: [
-    'I’m a React Native and React developer who enjoys turning real business requirements into stable, production-ready products. My work so far has centred on customer-facing apps: e-commerce storefronts, learning platforms, and the payment, notification, and API layers behind them.',
-    'On the web, I build responsive, accessible websites and React web apps, from a university department’s public site to MERN-stack applications with Node.js, Express and MongoDB, designed to load fast and look right on any device.',
-    'I care about reusable component systems that make the next feature faster to ship, performance that holds up on low-end devices, and working closely with designers and backend engineers in Agile teams to get features to production.',
+    'React and React Native Developer with 2+ years of experience building and shipping web and cross-platform mobile apps for Android and iOS. Skilled in React, React Native, TypeScript, JavaScript, Tailwind CSS, REST API integration, and state management (Zustand, Redux).',
+    'Delivered e-commerce product browsing, cart, checkout, and Razorpay payment flows, push notifications, and reusable, performant UI components in Agile, cross-functional teams.',
   ],
 }
 
