@@ -155,6 +155,7 @@ export const projects: {
       'Implemented Razorpay EMI and payment flows for course subscriptions.',
       'Managed app-wide state with Zustand, reducing re-render overhead and improving maintainability.',
       'Integrated Firebase / OneSignal push notifications to lift engagement and retention.',
+      'Integrated Google, Facebook and Apple login for seamless, secure sign-in and onboarding.',
     ],
     accent: 'violet',
     mock: 'lms',
