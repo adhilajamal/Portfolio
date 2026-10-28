@@ -3,7 +3,7 @@
 export const profile = {
   name: 'Adhila Jamal K U',
   shortName: 'Adhila Jamal',
-  role: 'React Native & Frontend Engineer',
+  role: 'Mobile Application & Web Developer',
   location: 'Calicut, Kerala',
   phone: '+91 90375 96328',
   email: 'adhilajamal89@gmail.com',
